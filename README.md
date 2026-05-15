@@ -1,4 +1,4 @@
-# Agora — Plateforme de Connaissance Collaborative
+# Agora - Plateforme de Connaissance Collaborative
 
 > *La place publique de la connaissance*
 
