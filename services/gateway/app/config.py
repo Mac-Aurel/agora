@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     discovery_service_url: str = "http://discovery:8000"
     jwt_secret: str
     jwt_algorithm: str = "HS256"
+    redis_url: str = "redis://redis:6379"
+    rate_limit_max_requests: int = 100
+    rate_limit_window_seconds: int = 60
 
 
 settings = Settings()

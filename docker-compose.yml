@@ -86,16 +86,24 @@ services:
       DISCOVERY_SERVICE_URL: http://discovery:8000
       JWT_SECRET: ${JWT_SECRET}
       JWT_ALGORITHM: ${JWT_ALGORITHM}
+      REDIS_URL: ${REDIS_URL}
     networks:
       - agora-network
     ports:
       - "8000:8000"
     depends_on:
-      - auth
-      - boards
-      - content
-      - search
-      - discovery
+      redis:
+        condition: service_healthy
+      auth:
+        condition: service_started
+      boards:
+        condition: service_started
+      content:
+        condition: service_started
+      search:
+        condition: service_started
+      discovery:
+        condition: service_started
 
   auth:
     build:
