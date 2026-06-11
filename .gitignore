@@ -25,3 +25,6 @@ dist/
 .idea/
 *.swp
 *.swo
+
+# Documentation interne
+AGORA.md
